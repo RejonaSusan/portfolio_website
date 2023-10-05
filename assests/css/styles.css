@@ -6,7 +6,7 @@
     --hue-color:326;
     --first-color: hsl(var(--hue-color), 57%, 53%);
     --first-color-second: hsl(var(--hue-color), 69%, 61%);
-    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-alt: hsl(var(--hue-color), 74%, 33%);
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
     --title-color: hsl(var(--hue-color), 8%, 15%);
     --text-color: hsl(var(--hue-color), 8%, 45%);
@@ -49,13 +49,13 @@
 
 @media screen and (min-width: 968px) {
     :root {
-        --big-font-size: 3rem;
-        --h1-font-size: 2.25rem;
-        --h2-font-size: 1.5rem;
-        --h3-font-size: 1.25rem;
-        --normal-font-size: 1rem;
-        --small-font-size: .875rem;
-        --smaller-font-size: .813rem;
+        --big-size: 3rem;
+        --h1-size: 2.25rem;
+        --h2-size: 1.5rem;
+        --h3-size: 1.25rem;
+        --normal-size: 1rem;
+        --small-size: .875rem;
+        --smaller-size: .813rem;
     }
 }
 
@@ -206,7 +206,6 @@ a {
     color: var(--first-color-alt);
 }
 
-
 .show-menu{
     bottom: 0;
 }
@@ -216,21 +215,68 @@ a {
 }
 
 .home_content{
-    grid-template-columns: .5fr, 3fr;
+    grid-template-columns: 10% 90%;
     padding-top: 3.5rem;
     align-items: center;
 }
 
 .home_socials{
     display: grid;
-    grid-template-columns: max-content;
-    row-gap: 1rem;
+    align-self: center;
+    gap: 3rem; 
 }
 
 .home_socials-icon{
     font-size: 1.25rem;
     color: var(--title-color);
 }
+
 .home_socials-icon:hover{
     color: var(--first-color);
+}
+
+.home_data{
+    grid-column-start: 1;
+    grid-column-end: 3;    
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  gap: 10px;
+  padding: 10px;
+}
+
+.home_title{
+    font-size: var(--big-size);
+}
+
+.home_subtitle{
+    font-size: var(--h3-size);
+    color: var(--text-color);
+    font-weight: var(--font-med);
+    margin-bottom: var(--mb-0-75);
+}
+
+.home_des{
+    margin-bottom: var(--mb-2);
+}
+
+.button{
+    display: inline-block;
+    background-color: var(--first-color);
+    color: #fff;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-weight: var(--font-med);
+}
+
+.button:hover{
+    background-color: var(--first-color-alt);
+}
+
+.button--flex{
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
 }
